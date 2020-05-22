@@ -25,7 +25,7 @@ SECRET_KEY = 'gg*dg(plo($z9^ij4c+#39l45s=wl@$)$l)ol6208kahfqi#&='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['react-django-lead-management.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['https://react-django-lead-management.herokuapp.com/', '127.0.0.1']
 
 
 # Application definition
@@ -87,13 +87,17 @@ WSGI_APPLICATION = 'leadmanager.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 
+
+DATABASES = {
+    'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
