@@ -11,6 +11,7 @@ djangorestframework = "*"
 django-rest-knox = "*"
 django-heroku = "*"
 gunicorn = "*"
+whitenoise = "*"
 
 [requires]
 python_version = "3.8"
