@@ -25,7 +25,7 @@ SECRET_KEY = 'gg*dg(plo($z9^ij4c+#39l45s=wl@$)$l)ol6208kahfqi#&='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["https://django-test-deployment.herokuapp.com/"]
 
 
 # Application definition
